@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portal de Juegos Sencillos</title>
+    <style>
+        /* --- ESTILOS GENERALES (Diseño Oscuro Tipo Gaming) --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #121214;
+            color: #ffffff;
+            padding-bottom: 50px;
+        }
+
+        /* --- ENCABEZADO --- */
+        header {
+            background: linear-gradient(135deg, #6200ee, #03dac6);
+            text-align: center;
+            padding: 60px 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* --- CONTENEDOR PRINCIPAL --- */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* --- REJILLA DE JUEGOS --- */
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        /* --- TARJETA DE JUEGO --- */
+        .game-card {
+            background-color: #1e1e24;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .game-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(98, 0, 238, 0.3);
+        }
+
+        /* Imagen/Miniatura del juego */
+        .game-thumb {
+            width: 100%;
+            height: 180px;
+            background-color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: #888;
+            object-fit: cover;
+        }
+
+        /* Info del juego */
+        .game-info {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .game-info h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: #03dac6;
+        }
+
+        .game-info p {
+            font-size: 0.95rem;
+            color: #a0a0a5;
+            line-height: 1.4;
+            margin-bottom: 20px;
+        }
+
+        /* Botón de Jugar */
+        .play-btn {
+            display: block;
+            text-align: center;
+            background-color: #6200ee;
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+
+        .play-btn:hover {
+            background-color: #7c22ff;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado de la página -->
+    <header>
+        <h1>Mis Juegos Web</h1>
+        <p>¡Haz clic en cualquier tarjeta y empieza a jugar al instante!</p>
+    </header>
+
+    <!-- Sección de Juegos -->
+    <div class="container">
+        <div class="games-grid">
+
+            <!-- JUEGO 1 -->
+            <div class="game-card">
+                <!-- Puedes cambiar el emoji por una imagen real usando: <img src="imagen.jpg" class="game-thumb"> -->
+                <div class="game-thumb">🐍</div> 
+                <div class="game-info">
+                    <h3>Juego de la Serpiente</h3>
+                    <p>El clásico juego retro. Come manzanas, crece todo lo que puedas y evita chocar contra las paredes o contra ti mismo.</p>
+                    <a href="juegos/serpiente/index.html" class="play-btn">JUGAR AHORA</a>
+                </div>
+            </div>
+
+            <!-- JUEGO 2 -->
+            <div class="game-card">
+                <div class="game-thumb">🧩</div>
+                <div class="game-info">
+                    <h3>Rompecabezas Mental</h3>
+                    <p>Pon a prueba tu agilidad mental resolviendo acertijos lógicos contrarreloj. ¿Cuántos niveles podrás superar?</p>
+                    <a href="juegos/puzzle/index.html" class="play-btn">JUGAR AHORA</a>
+                </div>
+            </div>
+
+            <!-- JUEGO 3 -->
+            <div class="game-card">
+                <div class="game-thumb">🚀</div>
+                <div class="game-info">
+                    <h3>Invasores del Espacio</h3>
+                    <p>Defiende la Tierra de oleadas de naves alienígenas en este frenético juego de disparos arcade en 2D.</p>
+                    <a href="juegos/espacio/index.html" class="play-btn">JUGAR AHORA</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
